@@ -39,3 +39,13 @@ const Form = () => {
           aria-label=".form-control-sm example"
         />
       </div>
+      <div className="col-3">
+        <input
+          name="description"
+          onChange={handleChange}
+          className="form-control form-control-sm"
+          type="text"
+          placeholder="Description"
+          aria-label=".form-control-sm example"
+        />
+      </div>
