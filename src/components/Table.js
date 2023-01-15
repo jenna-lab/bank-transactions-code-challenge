@@ -12,6 +12,7 @@ const Table = ({ data }) => {
         </tr>
       </thead>
       <tbody>
+        {/*mapping the data*/}
         {data.map((transaction, index) => {
           return (
             <tr key={index}>

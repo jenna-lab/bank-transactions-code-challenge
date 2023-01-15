@@ -96,3 +96,5 @@ DELETE /transactions/:id
 Example Response:
 
 {}
+# License
+https://github.com/jenna-lab/phase2codechallenge1/blob/main/License.md
