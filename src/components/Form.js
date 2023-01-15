@@ -1,3 +1,4 @@
+formm
 import React, { useState } from "react";
 
 const Form = () => {
@@ -69,3 +70,13 @@ const Form = () => {
           aria-label=".form-control-sm example"
         />
       </div>
+      <div className="col-3 p-3 mx-auto ">
+        <button type="submit" className="btn btn-dark">
+          Add Transaction
+        </button>
+      </div>
+    </form>
+  );
+};
+
+export default Form;
