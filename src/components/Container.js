@@ -13,4 +13,15 @@ function Container1() {
           setTransactions(res);
         });
     }, [search]);
-  
+    const handleChange = (e) => {
+        setSearch(e.target.value);
+      };
+      return (
+        <div>
+          <Search handleSearch={handleChange} />
+          <Form />
+          <Table data={transactions} />
+        </div>
+      );
+    }
+    export default Container1;
