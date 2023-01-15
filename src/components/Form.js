@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//get user inputs
 const Form = () => {
   const handleChange = (e) => {
     setFormData({
@@ -7,8 +8,10 @@ const Form = () => {
       [e.target.name]: e.target.value.trim(),
     });
   };
+  //form data to use state
   const [formData, setFormData] = useState({});
 
+  //submit execution
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch("http://localhost:8001/transactions", {

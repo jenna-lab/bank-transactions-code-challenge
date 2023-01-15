@@ -1,5 +1,6 @@
 import React from "react";
 
+//handleSearch as a prop
 const Search = ({ handleSearch }) => {
   return (
     <div className="col mx-auto p-3">
