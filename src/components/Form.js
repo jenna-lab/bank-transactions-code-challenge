@@ -59,3 +59,13 @@ const Form = () => {
           aria-label=".form-control-sm example"
         />
       </div>
+      <div className="col-3">
+        <input
+          name="amount"
+          onChange={handleChange}
+          className="form-control form-control-sm"
+          type="number"
+          placeholder="Amount"
+          aria-label=".form-control-sm example"
+        />
+      </div>
