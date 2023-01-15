@@ -24,3 +24,18 @@ const Form = () => {
       .then((data) => {
         alert("data posted");
       });
+
+    // ... submit to API
+  };
+  return (
+    <form className="row p-3" onSubmit={handleSubmit}>
+      <div className="col-3">
+        <input
+          name="date"
+          onChange={handleChange}
+          className="form-control form-control-sm"
+          type="date"
+          placeholder="date"
+          aria-label=".form-control-sm example"
+        />
+      </div>
