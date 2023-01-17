@@ -29,13 +29,6 @@
       "amount": -17.59
     },
     {
-      "id": 7,
-      "date": "2019-12-07",
-      "description": "Birthday Check from Grandma",
-      "category": "Gift",
-      "amount": 50
-    },
-    {
       "id": 8,
       "date": "2019-12-09",
       "description": "Lyft Ride",
@@ -62,13 +55,6 @@
       "description": "MTA Vending Machine: MetroCard",
       "category": "Transportation",
       "amount": -116.39
-    },
-    {
-      "id": 12,
-      "date": "2019-12-17",
-      "description": "Venmo, Pay Roommate for Rent",
-      "category": "Housing",
-      "amount": -975
     },
     {
       "date": "2022-07-09",

@@ -25,6 +25,7 @@ const Form = () => {
         return response.json();
       })
       .then((data) => {
+        document.location.reload();
         alert("data posted");
       });
 

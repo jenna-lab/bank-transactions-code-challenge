@@ -1,16 +1,22 @@
 import React from "react";
 
 const Table = ({ data }) => {
+  //executing delete function according to item id
   function handleDeleteClick(id) {
     fetch(`http://localhost:8001/transactions/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
       .then(() => {
+        //refreshes page after delete
         document.location.reload();
-        console.log("deleted!")});
+        console.log("deleted!");
+      });
   }
-  const sortedData = data.sort((a, b) => (a.description.toUpperCase() > b.description.toUpperCase() ? 1 : -1))
+  //sorting data alphabetically from a to z
+  const sortedData = data.sort((a, b) =>
+    a.description.toUpperCase() < b.description.toUpperCase() ? 1 : -1
+  );
   return (
     <table className="table table-striped table-hover p-3">
       <thead>
@@ -32,7 +38,10 @@ const Table = ({ data }) => {
               <td>{transaction.category}</td>
               <td>{transaction.amount}</td>
               <td>
-                <button className="remove" onClick={()=>handleDeleteClick(transaction.id)}>
+                <button
+                  className="remove"
+                  onClick={() => handleDeleteClick(transaction.id)}
+                >
                   Delete
                 </button>
               </td>
