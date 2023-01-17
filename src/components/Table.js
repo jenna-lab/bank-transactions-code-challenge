@@ -1,6 +1,16 @@
 import React from "react";
 
 const Table = ({ data }) => {
+  function handleDeleteClick(id) {
+    fetch(`http://localhost:8001/transactions/${id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => {
+        document.location.reload();
+        console.log("deleted!")});
+  }
+  const sortedData = data.sort((a, b) => (a.description.toUpperCase() > b.description.toUpperCase() ? 1 : -1))
   return (
     <table className="table table-striped table-hover p-3">
       <thead>
@@ -9,17 +19,23 @@ const Table = ({ data }) => {
           <th>Description</th>
           <th>Category</th>
           <th>Amount</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
         {/*mapping the data*/}
-        {data.map((transaction, index) => {
+        {sortedData.map((transaction, index) => {
           return (
             <tr key={index}>
               <td>{transaction.date}</td>
               <td>{transaction.description}</td>
               <td>{transaction.category}</td>
               <td>{transaction.amount}</td>
+              <td>
+                <button className="remove" onClick={()=>handleDeleteClick(transaction.id)}>
+                  Delete
+                </button>
+              </td>
             </tr>
           );
         })}
